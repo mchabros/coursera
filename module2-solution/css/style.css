@@ -1,0 +1,114 @@
+html, body {
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1;
+	background: #fff;
+	color: #000;
+}
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+p {
+	font-size: 1em;
+	line-height: 1.3;
+}
+h1, h2 {
+	font-weight: bold;
+	line-height: 1.2;
+}
+h1 {
+	font-size:1.75em;
+}
+h2 {
+	font-size: 1.25em;
+}
+
+.header {
+	margin:1.563em auto;
+}
+.header h1 {
+	text-align: center;
+}
+.content {
+	margin:1.563em auto;
+	width:80%;
+}
+.box {
+	position: relative;
+	margin:1em auto;
+	padding:3.125em 0.875em 0.675em;
+	background: #c7c7c7;
+	border:1px solid #000;
+}
+.box-title {
+	position: absolute;
+	top:-1px;
+	right: -1px;
+	padding:0.375em 1.875em;
+	border:1px solid black;
+}
+.box-title-1 {
+	background: #d59898;
+}
+.box-title-2 {
+	background: #c14543;
+}
+.box-title-3 {
+	background: #e5d198;
+}
+
+/*  the width of the brwoser window is 768px and above*/
+@media only screen and (min-width: 768px) {
+	.content:before, .content:after {
+		content: "";
+		display: table;
+	}
+	.content:after {
+		clear:both;
+	}
+	.content {
+		width:95%;
+	}
+	.box {
+		float: left;
+	}
+	.box:last-child {
+		margin-right: 0;
+	}
+	
+}
+
+/* a tablet version of the site when the width of the brwoser window is between 768px and 991px*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.box {
+		width:48.5%;
+		margin:1.25em 0;
+	}
+	.box:nth-child(2) {
+		float:right;
+	}
+
+	.box:last-child {
+		float:none;
+		width: 100%;
+		clear: both;
+	}
+	
+}
+
+/* a desktop version of the site when the width of the browser window is 992px and above*/
+@media only screen and (min-width: 992px) {
+	.header {
+		margin-bottom:4em;
+	}
+	.box {
+		width:31.66666666666667%;
+		margin:0 2.5% 0 0;
+	}
+	
+}
+
